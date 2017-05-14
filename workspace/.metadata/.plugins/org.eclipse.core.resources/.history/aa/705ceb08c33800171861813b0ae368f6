@@ -1,0 +1,9 @@
+package basic.learning;
+
+import javax.swing.JPanel;
+
+public class PanelDetails extends JPanel {
+public PanelDetails(){
+	
+}
+}

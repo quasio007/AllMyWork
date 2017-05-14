@@ -1,0 +1,31 @@
+package semaphore.demo;
+
+public class Try {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+Thread t1 =new Thread(new Runnable() {
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		Connections.getInstance().connect();
+	}
+});
+Thread t2 =new Thread(new Runnable() {
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		Connections.getInstance().connect();
+	}
+});
+t1.start();
+t1.start();
+
+t2.join();
+t2.join();
+
+	}
+
+}

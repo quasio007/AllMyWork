@@ -1,0 +1,10 @@
+package callable.future;
+
+public class Mathematics {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,21 @@
+package semaphore.demo;
+
+public class Connections {
+	private Connections(){
+		
+	}
+	private static Connections instance =new Connections();
+
+public static Connections getInstance(){
+	return instance;
+}
+
+public void connect(){
+	
+}
+
+
+
+
+
+}

@@ -1,0 +1,28 @@
+package interrupt.threads;
+
+public class UsingNormalThreads {
+
+	public static void main(String[] args) {
+		System.out.println("Starting");
+		Thread t = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				System.out.println(Thread.currentThread().getName());
+			}
+		});
+		t.start();
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		t.setName("Let's Do it...");
+		
+		System.out.println("Finished");
+
+	}
+
+}

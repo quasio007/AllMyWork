@@ -1,0 +1,64 @@
+package dead.lock;
+
+import java.util.Random;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class DeadLockDemo {
+	private Accounts act1 = new Accounts();
+	private Accounts act2 = new Accounts();
+	private Random ran = new Random();
+	private Lock lock1 = new ReentrantLock();
+	private Lock lock2 = new ReentrantLock();
+
+	private void acquireLock(Lock firstLock, Lock secondLock) {
+		while (true) {
+			if (firstLock.tryLock() && secondLock.tryLock()) {
+				System.out.println("Check1 "+Thread.currentThread().getName());
+				
+				lock1.lock();
+				System.out.println("Check2"+ Thread.currentThread().getName());
+//				lock2.lock();
+				return;
+			} else if (firstLock.tryLock()) {
+				firstLock.unlock();
+			} else if (secondLock.tryLock()) {
+				secondLock.unlock();
+			}
+		}
+	}
+
+	public void thread1Methord() {
+		acquireLock(lock1, lock2);
+		try {
+
+			for (int i = 0; i < 10000; i++) {
+				Accounts.transferMoney(act1, act2, ran.nextInt(1000));
+			}
+
+		} finally {
+			lock1.unlock();
+			lock2.unlock();
+		}
+
+	}
+
+	public void thread2Methord() {
+		acquireLock(lock1, lock2);
+		try {
+			for (int i = 0; i < 10000; i++) {
+				Accounts.transferMoney(act2, act1, ran.nextInt(1000));
+			}
+		} finally {
+			lock1.unlock();
+			lock2.unlock();
+		}
+
+	}
+
+	public void getFinalBalance() {
+		System.out.println("Account1 balance : " + act1.getBalance());
+		System.out.println("Account2 balance : " + act2.getBalance());
+		System.out.println("Total Balance: " + (act1.getBalance() + act2.getBalance()));
+	}
+}

@@ -1,0 +1,14 @@
+package basic.learning;
+
+import java.awt.Dimension;
+
+import javax.swing.JPanel;
+
+public class PanelDetails extends JPanel {
+public PanelDetails(){
+	Dimension size =getPreferredSize();
+	size.width =250;
+	setPreferredSize(size);
+	
+}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;Throwable.java&apos; to &apos;Error.java&apos;&#x0A;- Original project: &apos;TryCatchFinally&apos;&#x0A;- Original element: &apos;Throwable.java&apos;&#x0A;- Renamed element: &apos;Error.java&apos;" description="Rename compilation unit &apos;Throwable.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{Throwable.java" name="Error.java" references="false" stamp="1493710321202" version="1.0"/>
+</session>

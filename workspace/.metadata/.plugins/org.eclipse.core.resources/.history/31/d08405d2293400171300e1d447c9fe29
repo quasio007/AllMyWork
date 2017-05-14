@@ -1,0 +1,27 @@
+package callable.future;
+
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+
+public class CallableAndFuture {
+
+	public static void main(String[] args) {
+ExecutorService executor =Executors.newCachedThreadPool();
+executor.submit(new Callable<Integer>() {
+
+	@Override
+	public Integer call() throws Exception {
+		System.out.println("Starting...");
+		System.out.println("Finished");
+		return null;
+	}
+});
+executor.shutdown();
+executor.awaitTermination(1, TimeUnit.HOURS);
+
+
+
+}
+}

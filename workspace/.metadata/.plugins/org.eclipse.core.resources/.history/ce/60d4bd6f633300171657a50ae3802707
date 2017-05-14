@@ -1,0 +1,10 @@
+package semaphore.demo;
+
+public class SemaphoresDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

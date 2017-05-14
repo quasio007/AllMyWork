@@ -1,0 +1,38 @@
+package semaphore.demo;
+
+public class Connections {
+	private static Connections instance =new Connections();
+	private int count =0;
+	private Object lock =new Object();
+	private Connections(){
+		
+	}
+
+public static Connections getInstance(){
+	return instance;
+}
+
+public void connect(){
+	synchronized (lock) {
+		count++;
+		System.out.println("Current connections: "+count);
+	}
+	try {
+		Thread.sleep(2000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+synchronized (lock) {
+		count--;
+	}
+}
+//public void finalCount(){
+//	System.out.println("Final count is: "+count);
+//}
+
+
+
+
+
+}

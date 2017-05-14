@@ -1,0 +1,27 @@
+package basic.learning.revision;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+
+public class FrameDetails extends JFrame{
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+public FrameDetails(String text){
+	super(text);
+	JTextArea area =new JTextArea("Type here");
+	JButton button =new JButton("Click Me");
+	
+	Container con =getContentPane();
+	con.setLayout(new BorderLayout());
+	con.add(area, BorderLayout.CENTER);
+	con.add(button, BorderLayout.SOUTH);
+	
+}
+}

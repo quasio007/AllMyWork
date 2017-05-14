@@ -1,0 +1,19 @@
+package dead.lock;
+
+public class Accounts {
+private int balance =1000;
+
+public void addBalance(int amount){
+	balance += amount;
+}
+public void withdrawBalance(int amount){
+	balance -= amount;
+}
+public int returnBalance(){
+	return this.balance ;
+}
+public void transferMoney(Accounts act1 ,Accounts act2 ,int amount){
+	act1.withdrawBalance(amount);
+	act2.addBalance(amount);
+}
+}
