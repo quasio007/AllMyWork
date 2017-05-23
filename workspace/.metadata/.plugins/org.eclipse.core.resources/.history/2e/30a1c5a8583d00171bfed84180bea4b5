@@ -1,0 +1,28 @@
+package application.loginApp;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+
+public class Controller {
+	@FXML
+private TextArea area ;
+	@FXML
+	private TextField userName ;
+	
+	@FXML
+	private PasswordField password;
+	
+	public void Login(ActionEvent event){
+		if(userName.getText().equals("Mohit") && password.getText().equals("pass")){
+			area.setText("Success");
+		}else{
+			area.setText("Failure");
+		}
+		
+	}
+	
+
+}

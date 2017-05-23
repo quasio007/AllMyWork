@@ -1,0 +1,28 @@
+package application.calculator;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+
+public class Controller {
+	@FXML
+private Label label;
+private double number1=0;
+private String operator ="";
+private boolean flag =true;
+	@FXML
+	public void pressNumber(ActionEvent e){
+		if(flag){
+			flag=false;
+		}
+		
+		System.out.println(((Button) e.getSource()).getText());
+		
+	
+	}
+	@FXML
+	public void pressOperator(ActionEvent e){
+	
+	}
+}

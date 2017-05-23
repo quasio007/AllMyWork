@@ -1,9 +1,0 @@
-package basic.learning.revision;
-
-import java.util.EventObject;
-
-public class DetailsEvent extends EventObject{
-public DetailsEvent(Object source){
-	super(source);
-}
-}

@@ -1,0 +1,14 @@
+package application.calculator;
+
+import javafx.event.ActionEvent;
+
+public class Controller {
+
+	public void pressNumber(ActionEvent e){
+		
+	}
+	
+	public void pressOperator(ActionEvent e){
+	
+	}
+}

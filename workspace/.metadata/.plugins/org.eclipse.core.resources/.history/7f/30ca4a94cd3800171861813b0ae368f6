@@ -1,5 +1,0 @@
-package basic.learning.revision;
-
-public interface DetailsListner {
-
-}
