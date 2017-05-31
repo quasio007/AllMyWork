@@ -1,0 +1,15 @@
+package application.login.with.sqlite;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+
+
+public class UserPageController {
+	@FXML
+	private Label label2;
+	
+public void afterClick(ActionEvent e){
+	
+}
+}

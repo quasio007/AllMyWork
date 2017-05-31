@@ -1,0 +1,17 @@
+package learn.logging;
+
+import java.util.Properties;
+
+import org.apache.log4j.Logger;
+
+public class Demo1 {
+private static final Logger log =Logger.getLogger(Demo1.class);
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		Properties.con
+		String str ="Check";
+log.warn(str+" Done"+"1");
+	}
+
+}

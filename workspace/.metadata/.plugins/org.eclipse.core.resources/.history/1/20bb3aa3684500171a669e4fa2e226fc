@@ -1,0 +1,29 @@
+package pattern.matcher.regex;
+
+import java.util.regex.*;
+
+public class PatternLearning {
+
+	public static void main(String[] args) {
+		String regex = "..s";
+		String str = "aas";
+
+		// Methord1:
+		
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(str);
+		System.out.println(m.matches());
+		
+		 System.out.println(m.find());
+		 System.out.println(m.find());
+		 System.out.println(m.find());
+		 System.out.println(m.groupCount());
+		 
+		
+//		 Mehord2:
+		 
+		boolean flag = Pattern.matches("", "");
+//		System.out.println(flag);
+	}
+
+}

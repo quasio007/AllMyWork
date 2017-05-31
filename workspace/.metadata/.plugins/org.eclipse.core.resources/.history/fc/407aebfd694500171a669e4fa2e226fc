@@ -1,0 +1,31 @@
+package pattern.matcher.regex;
+
+import java.util.regex.*;
+
+public class PatternLearning {
+
+	public static void main(String[] args) {
+		
+
+		// Methord1:
+		/*
+		String regex = "..s";
+		String str = "aas";
+		
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(str);
+		System.out.println(m.matches());
+		
+		 System.out.println(m.find());
+		 System.out.println(m.find());
+		 System.out.println(m.find());
+		 System.out.println(m.groupCount());
+		 */
+		
+//		 Mehord2:
+		 
+		
+		System.out.println(Pattern.matches("[a-zA-Z]*","aaa"));
+	}
+
+}

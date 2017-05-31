@@ -1,0 +1,33 @@
+package basic.tutorial;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+
+public class Demo1 {
+
+	public static void main(String[] args) {
+		String url ="jdbc:mysql://localhost:3306/sys";
+		String user ="student";
+		String password ="student";
+		String sql ="Select * from Student";
+		try {
+			System.out.println("Check1");
+			Connection conn =DriverManager.getConnection(url, user, password);
+			System.out.println("Check2");
+			Statement statement =conn.createStatement();
+			ResultSet resultSet =statement.executeQuery(sql);
+			
+			while(resultSet.next()){
+				System.out.println("Name: "+resultSet.getString(3));
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+		}
+	}
+
+}

@@ -1,0 +1,33 @@
+package jdbc.template;
+
+import java.sql.*;
+
+
+public class Demo {
+
+	public static void main(String[] args) throws SQLException {
+		String driverClass ="com.mysql.jdbc.Driver";
+		String url ="jdbc:mysql://localhost:3306/demo";
+		String user ="root";
+		String password ="7737635304";
+		String sql ="Select * from Student";
+		
+
+	
+		try {
+			 
+	
+			
+
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+			System.exit(0);
+		}finally{
+
+		}
+	}
+
+}
+

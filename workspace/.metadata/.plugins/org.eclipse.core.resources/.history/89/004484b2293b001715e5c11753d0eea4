@@ -1,6 +1,0 @@
-package applicattion.fxml.demo;
-
-public class Snippet {
-	Integer num1 =Integer.parseInt(field1.getText());
-}
-

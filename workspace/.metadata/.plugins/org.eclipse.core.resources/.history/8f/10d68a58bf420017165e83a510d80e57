@@ -1,0 +1,31 @@
+package application.login.with.sqlite;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+
+
+public class UserPageController implements Initializable{
+	@FXML
+	private Label label2;
+	
+	public void setLabel(String userName){
+		label2.setText(userName);
+	}
+	
+	
+public void afterClick(ActionEvent e){
+	
+}
+
+
+@Override
+public void initialize(URL location, ResourceBundle resources) {
+	// TODO Auto-generated method stub
+	
+}
+}

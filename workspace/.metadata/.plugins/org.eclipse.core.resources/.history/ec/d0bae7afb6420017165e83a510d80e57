@@ -1,0 +1,7 @@
+package application.login.with.sqlite;
+
+import javafx.fxml.FXML;
+
+public class UserPageController {
+
+}

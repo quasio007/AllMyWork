@@ -1,0 +1,7 @@
+package application.login.with.sqlite;
+
+public class SqliteConnection {
+public static Connection connect(){
+	
+};
+}

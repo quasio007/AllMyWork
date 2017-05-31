@@ -1,0 +1,31 @@
+package application.login.with.sqlite;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class LoginModel {
+private	Connection connection;
+public LoginModel(){
+	 this.connection =SqliteConnection.connect();
+	if(connection ==null){
+		System.out.println("Unable to Stablish a successfull connection");
+		System.exit(0);
+	}
+}
+
+public boolean isDBConnected(){
+	try {
+		if(!connection.isClosed()){
+			return true;
+		}else{
+			return false;
+		}
+		
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		return false;
+	}
+}
+
+}

@@ -1,0 +1,37 @@
+package learning.sqlite;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Demo1 {
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+connect();
+	}
+	
+	public static void connect(){
+		 
+		
+        // create a connection to the database
+		try {
+			
+			String url = "jdbc:sqlite:/Users/mohitgodara/Documents/Sqlite/StudentDB.sqlite";
+			Connection conn = DriverManager.getConnection(url);
+			Class.forName("org.sqlite.JDBC");
+			System.out.println("Connection to SQLite has been established.");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Message: "+e.getMessage());
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
+        
+	}
+
+}

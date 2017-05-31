@@ -1,0 +1,10 @@
+package application.login.with.sqlite;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+
+public class UserPageController {
+public void afterClick(ActionEvent e){
+	
+}
+}

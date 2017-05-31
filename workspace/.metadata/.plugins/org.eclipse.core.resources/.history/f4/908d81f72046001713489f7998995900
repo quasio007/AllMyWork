@@ -1,0 +1,17 @@
+package cell.phones;
+
+import java.lang.annotation.Annotation;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Nokia nokia = new Nokia();
+Class c = nokia.getClass();
+Annotation an =c.getAnnotation(SmartPhone.class);
+SmartPhone smartPhone = (SmartPhone) an;
+System.out.println(smartPhone);
+
+	}
+
+}
